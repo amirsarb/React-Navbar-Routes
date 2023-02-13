@@ -1,3 +1,75 @@
+<div>
+  <h1 align="center">This is a practice for React Navbar  : 🧑‍💻</h1>
+  <h2 align="center"> react-router-dom</h2>
+<h3>Goals</h3>
+  <ul>
+  <li>
+    Use Navbar in React
+  </li>
+  <li>
+    Use Routes / Route / NavLink/ Link (react-router-dom)
+  </li>
+
+   </ul>
+
+  <p>
+    Screenshot:
+  </p>
+
+  <a href="">
+    <img
+      alt="React-router-dom"
+      src="screenshot.jpg"
+    />
+  </a>
+</div>
+
+<hr />
+
+## Requirements
+- NPM
+- React
+- React-dom
+- react-router-dom
+
+
+## Main Component
+- App.js
+
+
+```javascript
+import {
+  Routes,
+  Route,
+  NavLink
+} from "react-router-dom";
+
+function App() {
+  return ( <div className='mainApp'>
+  <nav className='navbar'>
+    <NavLink exact="true" activeclassname='link-active' to='/home'>
+      Home
+    </NavLink>
+    <NavLink exact="true" activeclassname='link-active' to='/contact'>
+      Contact
+    </NavLink>
+    <NavLink exact="true" activeclassname='link-active' to='/about'>
+      About
+    </NavLink>
+
+
+  </nav>
+
+  <Routes>
+    <Route exact path='/' element={<Home />} />
+    <Route exact path='/home' element={<Home />} />
+    <Route exact path='/contact' element={<Contact />} />
+    <Route exact path='/about' element={<About />} />
+  
+  </Routes>
+</div>
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
